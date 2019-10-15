@@ -119,7 +119,7 @@ void tiletoepsg28992(long long ix, long long iy, int zoom, double *ox, double *o
     // resolution at zoom level 0: 3440.640
     // width and heigth: 256 pixels
 
-    double resolution = 880803.84 / (1LL << zoom);
+    double resolution = 880803.84 * (1LL << zoom);
     *ox = ix * resolution - 285401.920;
     *oy = 903401.920 + iy * resolution;
 }
